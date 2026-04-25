@@ -31,7 +31,14 @@ function App() {
 
         {activeTab === 'home' ? (
           <div className="panel home-panel">
-            <h1>{homePageText}</h1>
+            <p className="home-kicker">Live VPS dashboard</p>
+            <h1 className="home-title" aria-label={homePageText}>
+              <span className="home-title-line">This page is</span>
+              <span className="home-title-line">managed by</span>
+              <span className="home-title-highlight">Neuro VPS</span>
+              <span className="home-title-line">Hermes Agent</span>
+            </h1>
+            <p className="home-subtitle">A clean control surface for your hosted agent workflows.</p>
           </div>
         ) : (
           <div className="panel groceries-panel">
