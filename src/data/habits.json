@@ -1,0 +1,51 @@
+{
+  "title": "Good Habits for an 8 Year Old",
+  "subtitle": "Simple daily tasks that build independence, kindness, and confidence.",
+  "tasks": [
+    {
+      "name": "Brush teeth morning and night",
+      "when": "Morning + bedtime",
+      "goal": "Keep teeth clean and build a reliable routine"
+    },
+    {
+      "name": "Make the bed",
+      "when": "After waking up",
+      "goal": "Start the day by finishing one small responsibility"
+    },
+    {
+      "name": "Pack school bag",
+      "when": "Before bedtime",
+      "goal": "Be ready for the next day without rushing"
+    },
+    {
+      "name": "20 minutes of reading",
+      "when": "After homework or before bed",
+      "goal": "Grow vocabulary, focus, and imagination"
+    },
+    {
+      "name": "Tidy toys and desk",
+      "when": "Evening reset",
+      "goal": "Keep spaces calm and easy to use"
+    },
+    {
+      "name": "Drink water",
+      "when": "With each meal and after play",
+      "goal": "Stay hydrated and energized"
+    },
+    {
+      "name": "Help with one family chore",
+      "when": "After school or dinner",
+      "goal": "Practice teamwork and responsibility"
+    },
+    {
+      "name": "Say one kind thing",
+      "when": "Anytime today",
+      "goal": "Build empathy and positive friendships"
+    },
+    {
+      "name": "Screen-time finish check",
+      "when": "When screen time ends",
+      "goal": "Turn devices off calmly and move to the next activity"
+    }
+  ]
+}

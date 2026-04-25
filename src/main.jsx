@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
 import { createRoot } from 'react-dom/client';
 import groceriesData from './data/groceries.json';
+import habitsData from './data/habits.json';
 import './styles.css';
 
 export const homePageText = 'This page is managed by Neuro VPS Hermes Agent';
+export const habitsPageTitle = 'Good Habits for an 8 Year Old';
 
 function App() {
   const [activeTab, setActiveTab] = useState('home');
@@ -27,9 +29,16 @@ function App() {
           >
             Groceries
           </button>
+          <button
+            className={activeTab === 'habits' ? 'tab active' : 'tab'}
+            type="button"
+            onClick={() => setActiveTab('habits')}
+          >
+            Habits
+          </button>
         </nav>
 
-        {activeTab === 'home' ? (
+        {activeTab === 'home' && (
           <div className="panel home-panel">
             <p className="home-kicker">Live VPS dashboard</p>
             <h1 className="home-title" aria-label={homePageText}>
@@ -40,7 +49,9 @@ function App() {
             </h1>
             <p className="home-subtitle">A clean control surface for your hosted agent workflows.</p>
           </div>
-        ) : (
+        )}
+
+        {activeTab === 'groceries' && (
           <div className="panel groceries-panel">
             <h1>Groceries</h1>
             <p className="subtitle">Shopping list tracked in this GitHub repo.</p>
@@ -71,6 +82,26 @@ function App() {
               ) : (
                 <p className="empty-state">Nothing bought yet.</p>
               )}
+            </section>
+          </div>
+        )}
+
+        {activeTab === 'habits' && (
+          <div className="panel habits-panel">
+            <h1>{habitsPageTitle}</h1>
+            <p className="subtitle">{habitsData.subtitle}</p>
+
+            <section className="habit-grid" aria-label="Daily habit tasks">
+              {habitsData.tasks.map((task) => (
+                <article className="habit-card" key={task.name}>
+                  <div className="habit-check" aria-hidden="true">☆</div>
+                  <div>
+                    <h2>{task.name}</h2>
+                    <p className="habit-when">{task.when}</p>
+                    <p className="habit-goal">{task.goal}</p>
+                  </div>
+                </article>
+              ))}
             </section>
           </div>
         )}
